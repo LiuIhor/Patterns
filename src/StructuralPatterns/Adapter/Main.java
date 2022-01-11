@@ -2,7 +2,6 @@ package StructuralPatterns.Adapter;
 
 public class Main {
     public static void main(String[] args) {
-        // Круглое к круглому — всё работает.
         RoundHole hole = new RoundHole(5);
         RoundPeg rpeg = new RoundPeg(5);
         if (hole.fits(rpeg)) {
@@ -11,9 +10,8 @@ public class Main {
 
         SquarePeg smallSqPeg = new SquarePeg(2);
         SquarePeg largeSqPeg = new SquarePeg(20);
-        // hole.fits(smallSqPeg); // Не скомпилируется.
+        //hole.fits(smallSqPeg);
 
-        // Адаптер решит проблему.
         SquarePegAdapter smallSqPegAdapter = new SquarePegAdapter(smallSqPeg);
         SquarePegAdapter largeSqPegAdapter = new SquarePegAdapter(largeSqPeg);
         if (hole.fits(smallSqPegAdapter)) {

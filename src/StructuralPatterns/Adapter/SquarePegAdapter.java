@@ -10,7 +10,6 @@ public class SquarePegAdapter extends RoundPeg {
     @Override
     public double getRadius() {
         double result;
-        // Рассчитываем минимальный радиус, в который пролезет этот колышек.
         result = (Math.sqrt(Math.pow((peg.getWidth() / 2), 2) * 2));
         return result;
     }
